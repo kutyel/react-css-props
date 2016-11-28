@@ -1,0 +1,9 @@
+{
+  "name": "react-css-props",
+  "version": "1.0.0",
+  "description": "Dynamically turn your props into CSS clases!",
+  "main": "index.js",
+  "repository": "https://github.com/kutyel/react-css-props.git",
+  "author": "kutyel <flaviocorpa@gmail.com>",
+  "license": "MIT"
+}
