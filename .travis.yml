@@ -11,6 +11,7 @@ node_js:
 script:
   - yarn run test:single
 after_success:
+  - yarn run report-coverage
   - yarn run semantic-release
 branches:
   except:
