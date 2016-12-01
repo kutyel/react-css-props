@@ -1,4 +1,4 @@
-export default (theme, mapper) =>
+const cssProps = (theme, mapper) =>
     (props, defaultClass) => {
         if (Object.keys(props).length) {
             return Object.keys(props)
@@ -9,3 +9,5 @@ export default (theme, mapper) =>
             return defaultClass ? [theme[defaultClass]] : [];
         }
     };
+
+module.exports = cssProps;

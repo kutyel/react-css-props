@@ -3,7 +3,29 @@
   "version": "1.0.0",
   "description": "Dynamically turn your props into CSS clases!",
   "main": "index.js",
-  "repository": "https://github.com/kutyel/react-css-props.git",
-  "author": "kutyel <flaviocorpa@gmail.com>",
-  "license": "MIT"
+  "scripts": {
+    "test": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kutyel/react-css-props.git"
+  },
+  "keywords": [
+    "react",
+    "css",
+    "props",
+    "css modules"
+  ],
+  "author": "Flavio Corpa Ríos <flaviocorpa@gmail.com> (https://github.com/kutyel)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kutyel/react-css-props/issues"
+  },
+  "homepage": "https://github.com/kutyel/react-css-props#readme",
+  "devDependencies": {
+    "jest-cli": "^17.0.3"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
 }
