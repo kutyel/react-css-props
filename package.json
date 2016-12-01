@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "commit": "git-cz",
-    "test:single": "jest",
     "test": "jest --watch",
+    "test:single": "jest --coverage",
     "report-coverage": "nyc report --reporter=text-lcov | coveralls",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
