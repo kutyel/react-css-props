@@ -4,8 +4,9 @@
   "description": "Dynamically turn your props into CSS clases!",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watch",
     "commit": "git-cz",
+    "test:single": "jest",
+    "test": "jest --watch",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
