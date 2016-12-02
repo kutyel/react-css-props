@@ -1,4 +1,4 @@
-const cssProps = require('./index');
+import cssProps from './index';
 
 // Mock imported theme from CSS Modules
 const theme = {
