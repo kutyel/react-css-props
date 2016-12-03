@@ -5,8 +5,8 @@
     "main": "dist/index.js",
     "scripts": {
         "commit": "git-cz",
-        "test": "jest --watch",
-        "test:single": "jest --coverage",
+        "test:w": "jest --watch",
+        "test": "jest --coverage",
         "prebuild": "rimraf dist",
         "build": "babel --out-dir dist --ignore *.test.js index.js",
         "report-coverage": "cat ./coverage/lcov.info | coveralls",
@@ -44,11 +44,19 @@
         "semantic-release": "^6.3.2"
     },
     "jest": {
-        "testEnvironment": "node"
+        "testEnvironment": "node",
+        "coverageThreshold": {
+            "global": {
+                "branches": 100,
+                "functions": 100,
+                "lines": 100,
+                "statements": 100
+            }
+        }
     },
     "config": {
         "ghooks": {
-            "pre-commit": "yarn run test:single"
+            "pre-commit": "yarn test"
         },
         "commitizen": {
             "path": "node_modules/cz-conventional-changelog"

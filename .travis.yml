@@ -9,12 +9,11 @@ node_js:
   - '6'
   - '4'
 script:
-  - yarn run test:single
-#   - yarn run check-coverage
-  - yarn run build
+  - yarn test
+  - yarn build
 after_success:
   - yarn run report-coverage
   - yarn run semantic-release
 branches:
-  except:
-    - /^v\d+\.\d+\.\d+$/
+  only:
+    - master
