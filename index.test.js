@@ -31,6 +31,12 @@ describe('react-css-props', () => {
         expect(cssProps(theme)({ icon: true })).toEqual([theme.icon]);
     });
 
+    test('should only turn positive props into classNames', () => {
+        expect(
+            cssProps(theme)({ button: true, icon: false })
+        ).toEqual([theme.button]);
+    });
+
     test('should use the mapper if provided', () => {
         expect(
             cssProps(theme, type => `icon-${type}`)({ save: true })
