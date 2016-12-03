@@ -138,6 +138,7 @@ import cssProps from 'react-css-props';
 
 import theme from './Icon.scss';
 
+// Prepare it with your custom mapper function
 const toCSS = cssProps(theme, type => `icon-${type}`);
 
 const Icon = (props) => (
@@ -153,7 +154,11 @@ Isn't that *neat*? No longer need for code like this: `<Icon className="icon ico
 
 ### `cssProps(theme: Object, [mapper: (string) => string])`
 
-The first argument is the `theme` imported from CSS Modules which, as confirmed by @markdalgleish, "It's just a regular JavaScript *object* :)".
+The first argument is the `theme` imported from CSS Modules which, as confirmed by **Mark Dalgleish** (the creator of CSS Modules), it's just a regular *JavaScript *object**.
+
+<blockquote class="twitter-tweet" data-lang="es"><p lang="en" dir="ltr"><a href="https://twitter.com/FlavioCorpa">@FlavioCorpa</a> just a regular object :)</p>&mdash; Mark Dalgleish (@markdalgleish) <a href="https://twitter.com/markdalgleish/status/804033901161156608">30 de noviembre de 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 The second argument is **optional** and corresponds to a mapper *function* in case your CSS clases follow a defined pattern.
 This method **returns** the next function (you can name any of these two literally *whatever* you like):
 
@@ -162,7 +167,7 @@ This method **returns** the next function (you can name any of these two literal
 The first argument are the `props` of your component, likely to have been delegated to only your plausible CSS classes with the **spread operator (`...props`)**.
 The second argument is also **optional** and consists on a default CSS class, if you have any.
 This method will **always return an arraw** of matching CSS classes between your *theme* and your *props*.
-This plays along very well with [**classnames**](https://github.com/JedWatson/classnames) to custimize your components, as shown in the examples.
+This plays along very well with [**classnames**](https://github.com/JedWatson/classnames) to customize your components, as shown in the examples.
 
 ## License
 
