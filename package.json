@@ -9,7 +9,9 @@
         "test:w": "jest --watch",
         "test": "jest --coverage",
         "prebuild": "rimraf dist",
-        "build": "babel --out-dir dist --ignore *.test.js index.js",
+        "build": "yarn run build:lib && yarn run build:flow",
+        "build:lib": "babel --out-dir dist --ignore *.test.js src",
+        "build:flow": "flow-copy-source -v -i *.test.js src dist",
         "report-coverage": "cat ./coverage/lcov.info | coveralls",
         "semantic-release": "semantic-release pre && yarn publish && semantic-release post"
     },
@@ -41,6 +43,7 @@
         "coveralls": "^2.11.15",
         "cz-conventional-changelog": "^1.2.0",
         "flow-bin": "^0.36.0",
+        "flow-copy-source": "^1.1.0",
         "ghooks": "^1.3.2",
         "jest-cli": "^17.0.3",
         "rimraf": "^2.5.4",
