@@ -19,7 +19,7 @@ describe('react-css-props', () => {
 
     test('generated function should always return an array', () => {
         expect(cssProps(theme)({})).toEqual([]);
-    })
+    });
 
     test('should return an array with the specified default class', () => {
         expect(cssProps(theme)({}, 'button')).toEqual([theme.button]);

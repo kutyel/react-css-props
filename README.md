@@ -167,9 +167,9 @@ This plays along very well with [**classnames**](https://github.com/JedWatson/cl
 
 ## Stack
 
-- [Flow](https://flowtype.org/), *a static type checker for JavaScript*.
-- [Jest](https://facebook.github.io/jest/), *painless JavaScript testing*.
-- [Yarn](https://yarnpkg.com/), *fast, reliable, and secure dependency management*.
+- [Flow](https://flowtype.org/) *- a static type checker for JavaScript*.
+- [Jest](https://facebook.github.io/jest/) *- painless JavaScript testing*.
+- [Yarn](https://yarnpkg.com/) *- fast, reliable, and secure dependency management*.
 
 ## License
 

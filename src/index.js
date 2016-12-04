@@ -7,7 +7,7 @@ export default (theme: Object, mapper?: string => string) =>
                 .filter(prop => !!props[prop])
                 .map(className => mapper ?
                     theme[mapper(className)] :
-                    theme[className])
+                    theme[className]);
         } else {
             return defaultClass ? [theme[defaultClass]] : [];
         }
