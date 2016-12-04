@@ -152,18 +152,24 @@ Isn't that *neat*? No longer need for code like this: `<Icon className="icon ico
 
 ## API
 
-### `cssProps(theme: Object, [mapper: (string) => string])`
+### `cssProps(theme: Object, mapper?: (string) => string)`
 
 The first argument is the `theme` imported from CSS Modules which, as [confirmed](https://twitter.com/markdalgleish/status/804033901161156608) by **Mark Dalgleish** (the creator of CSS Modules), it's "just a regular JavaScript *object* :)".
 The second argument is **optional** and corresponds to a mapper *function* in case your CSS clases follow a defined pattern.
 This method **returns** the next function (you can name any of these two literally *whatever* you like):
 
-### `toCSS(props: Object, [defaultClass: string])`
+### `toCSS(props: Object, defaultClass?: string): Array<string>`
 
 The first argument are the `props` of your component, likely to have been delegated to only your plausible CSS classes with the **spread operator (`...props`)**.
 The second argument is also **optional** and consists on a default CSS class, if you have any.
-This method will **always return an arraw** of matching CSS classes between your *theme* and your *props*.
+This method will **always return a `string` array** of matching CSS classes between your *theme* and your *props*.
 This plays along very well with [**classnames**](https://github.com/JedWatson/classnames) to customize your components, as shown in the examples.
+
+## Stack
+
+- [Flow](https://flowtype.org/), *a static type checker for JavaScript*.
+- [Jest](https://facebook.github.io/jest/), *painless JavaScript testing*.
+- [Yarn](https://yarnpkg.com/), *fast, reliable, and secure dependency management*.
 
 ## License
 
