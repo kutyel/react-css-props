@@ -23,6 +23,10 @@
         "react",
         "css",
         "props",
+        "flow",
+        "jest",
+        "yarn",
+        "flowtype",
         "css modules"
     ],
     "files": [

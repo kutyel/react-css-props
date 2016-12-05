@@ -99,16 +99,15 @@ As you can imagine, the code before *react-css-props* was as weird as `<Block cl
 
 Now let's move into a more complex example. We have the following CSS and we don't have control over it cause it's auto-generated (maybe, by our *Designer*):
 
-```scss
+```css
 @font-face {
-  font-family: $icon-font;
+  font-family: Custom Icons;
   src: url("./Icon.woff");
 }
 
 .icon {
-  font-family: $icon-font, "Helvetica", "sans-serif";
+  font-family: Custom Icons, Helvetica, sans-serif;
   font-style: normal !important;
-  margin-right: $size0_5;
 }
 
 .icon-arrow-down:before {
@@ -136,7 +135,7 @@ import React from 'react';
 import cn from 'classnames';
 import cssProps from 'react-css-props';
 
-import theme from './Icon.scss';
+import theme from './Icon.css';
 
 // Prepare it with your custom mapper function
 const toCSS = cssProps(theme, type => `icon-${type}`);
