@@ -41,7 +41,7 @@
     "homepage": "https://github.com/kutyel/react-css-props#readme",
     "devDependencies": {
         "babel-cli": "^6.18.0",
-        "babel-eslint": "^7.1.1",
+        "babel-eslint": "^8.0.0",
         "babel-plugin-transform-flow-strip-types": "^6.18.0",
         "babel-preset-latest": "^6.16.0",
         "commitizen": "^2.8.6",
